@@ -35,10 +35,10 @@
             </a>
             <ul class="header__nav">
                 <li><a href="#" class="active">home</a></li>
-                <li><a href="#">products</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">gallery</a></li>
-                <li><a href="#">news</a></li>
+                <li><a onclick="scrollToProducts()">products</a></li>
+                <li><a onclick="scrollToAbout()">about</a></li>
+                <li><a onclick="scrollToGallery()">gallery</a></li>
+                <li><a onclick="scrollToNews()">news</a></li>
             </ul>
             <div class="header__cta">
                 <a href="#" class="header__cta--btn">
@@ -80,7 +80,7 @@
                 <img src="img/hero-banner.jpg" alt="">
             </picture>
         </section>
-        <section class="products --ptb">
+        <section class="products --ptb" id="products">
             <div class="container">
                 <div class="products__blog">
                     <div class="products__blog--content">
@@ -171,7 +171,7 @@
                 <img src="img/bg-video.jpg" alt="">
             </picture>
         </section>
-        <section class="about --ptb">
+        <section class="about --ptb" id="about">
             <div class="container">
                 <div class="about__thumb">
                     <img src="img/about_us-thumb.jpg" alt="">
@@ -191,7 +191,7 @@
                 </div>
             </div>
         </section>
-        <section class="gallery --ptb">
+        <section class="gallery --ptb" id="gallery">
             <div class="container">
                 <div class="textbox">
                     <h2 class="heading --lv2">
@@ -211,7 +211,7 @@
                 </div>
             </div>
         </section>
-        <section class="news --ptb">
+        <section class="news --ptb" id="news">
             <div class="container">
                 <div class="textbox">
                     <h2 class="heading --lv2">

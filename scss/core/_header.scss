@@ -13,16 +13,12 @@
         position: relative;
 
         .header__logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flexCenter;
             height: 100%;
         }
 
         .header__nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexCenter;
             text-transform: uppercase;
             position: absolute;
             left: 50%;
@@ -33,11 +29,9 @@
                 a {
                     display: flex;
                     flex-direction: column;
-                    color: white;
-                    font-family: pb;
-                    letter-spacing: 1.5px;
-                    line-height: normal;
+                    @include formatText(pb, var(--fz-btn), normal, var(--ls-btn), var(--white-cl));
                     padding: 5px 20px;
+                    cursor: pointer;
 
                     &.active {
                         color: var(--prim-cl);
@@ -53,23 +47,6 @@
                 }
             }
 
-            // li:not(:first-child) {
-
-            //     a {
-            //         &:hover {
-            //             color: var(--prim-cl);
-
-            //             &::after {
-            //                 content: '';
-            //                 display: block;
-            //                 width: -moz-fit-content;
-            //                 height: 2px;
-            //                 background-color: var(--prim-cl);
-            //             }
-            //         }
-            //     }
-            // }
-
         }
 
         .header__cta {
@@ -78,12 +55,11 @@
             justify-content: center;
 
             .header__cta--btn {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
+                @include flexCenter;
                 padding: 0 18px;
                 height: 38px;
-                color: var(--white-cl);
+                @include formatText(pb, var(--fz-btn), normal, var(--ls-btn), var(--white-cl));
+
 
                 svg {
                     margin-left: 2px;

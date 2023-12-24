@@ -8,7 +8,7 @@
     // Width
     --max-w-page: 2560px;
     --max-w-cfluid: 1920px;
-    --max-w-container: 1252px;
+    --max-w-container: 1252px; //1252px
     // Text
     --fz-lv1: 84px;
     --fz-lv2: 46px;
@@ -35,4 +35,12 @@
     --pd--section: 120px;
     // Duration time
     --btn-dt: 0.2s;
+
+    // Responsive
+    @include sm {
+        --max-w-container: 1016px; // 960px + 28px*2
+        --pd--section: 90px;
+    }
+
+
 }

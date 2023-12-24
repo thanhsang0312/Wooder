@@ -31,3 +31,46 @@
     letter-spacing: $ls;
     color: $cl;
 }
+
+@mixin generalContainer($w, $mw, $pl, $pr) {
+    width: $w;
+    max-width: $mw;
+    padding-left: $pl;
+    padding-right: $pr;
+    margin: 0 auto;
+}
+
+// Laptop lớn, screen <= 1440px 
+@mixin lg {
+    @media screen and (max-width: 1440px) {
+        @content;
+    }
+}
+
+// Laptop nhỏ hoặc tablet lớn, screen < 1200px 
+@mixin md {
+    @media screen and (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+// Tablet vừa, screen <= 992px 
+@mixin sm {
+    @media screen and (max-width: 991.98px) {
+        @content;
+    }
+}
+
+// Tablet nhỏ hoặc phone xoay ngang , screen < 768px
+@mixin xs {
+    @media screen and (max-width: 767.98px) {
+        @content;
+    }
+}
+
+// Phone lớn, screen < 576px 
+@mixin xxs {
+    @media screen and (max-width: 575.98px) {
+        @content;
+    }
+}

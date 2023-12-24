@@ -6,26 +6,15 @@ html {
         width: 100%;
         max-width: var(--max-w-page);
         margin: auto;
-        font-family: pr;
-        font-size: var(--fz-text);
-        line-height: var(--lh-text);
-        letter-spacing: var(--ls-text);
-        color: var(--black-cl);
+        @include formatText(pr, var(--fz-text), var(--lh-text), var(--ls-text), var(--black-cl));
 
         .container-fluid {
-            width: 100%;
-            max-width: var(--max-w-cfluid);
-            padding-left: var(--pd--cfluid);
-            padding-right: var(--pd--cfluid);
-            margin: 0 auto;
+            @include generalContainer(100%, var(--max-w-cfluid), var(--pd--cfluid), var(--pd--cfluid));
             position: relative;
         }
 
         .container {
-            width: 100%;
-            max-width: var(--max-w-container);
-            padding: 0 var(--pd--container);
-            margin: 0 auto;
+            @include generalContainer(100%, var(--max-w-container), var(--pd--container), var(--pd--container));
             position: relative;
         }
 

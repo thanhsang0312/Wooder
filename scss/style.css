@@ -91,6 +91,12 @@ sup {
   --pd--section: 120px;
   --btn-dt: 0.2s;
 }
+@media screen and (max-width: 991.98px) {
+  :root {
+    --max-w-container: 1016px;
+    --pd--section: 90px;
+  }
+}
 
 html {
   font-size: 62.5%;
@@ -117,7 +123,8 @@ html body .container-fluid {
 html body .container {
   width: 100%;
   max-width: var(--max-w-container);
-  padding: 0 var(--pd--container);
+  padding-left: var(--pd--container);
+  padding-right: var(--pd--container);
   margin: 0 auto;
   position: relative;
 }
@@ -247,8 +254,8 @@ button {
 }
 .header .container-fluid .header__logo {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100%;
 }
 .header .container-fluid .header__nav {
@@ -263,11 +270,13 @@ button {
 .header .container-fluid .header__nav li a {
   display: flex;
   flex-direction: column;
-  color: white;
   font-family: pb;
-  letter-spacing: 1.5px;
+  font-size: var(--fz-btn);
   line-height: normal;
+  letter-spacing: var(--ls-btn);
+  color: var(--white-cl);
   padding: 5px 20px;
+  cursor: pointer;
 }
 .header .container-fluid .header__nav li a.active {
   color: var(--prim-cl);
@@ -285,11 +294,15 @@ button {
   justify-content: center;
 }
 .header .container-fluid .header__cta .header__cta--btn {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0 18px;
   height: 38px;
+  font-family: pb;
+  font-size: var(--fz-btn);
+  line-height: normal;
+  letter-spacing: var(--ls-btn);
   color: var(--white-cl);
 }
 .header .container-fluid .header__cta .header__cta--btn svg {
@@ -320,15 +333,16 @@ button {
   position: relative;
 }
 .footer .container .footer__copyright {
-  color: var(--white-cl);
+  font-family: pr;
   font-size: var(--fz-text-sm);
   line-height: normal;
   letter-spacing: var(--ls-text-sm);
+  color: var(--white-cl);
 }
 .footer .container .footer__logo {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100%;
   position: absolute;
   left: 50%;
@@ -340,8 +354,8 @@ button {
   height: 33px;
   padding: 0 10px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 10;
   bottom: 32px;

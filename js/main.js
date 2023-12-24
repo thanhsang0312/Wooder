@@ -19,8 +19,21 @@ function scrollToTop() {
         btnElement.classList.remove('show');
     }
 }
-// -----------------------'
+// -----------------------
 
-
-
-// scrollToElement();
+function scrollToProducts() {
+    const productsElement = document.querySelector('#products');
+    productsElement.scrollIntoView();
+}
+function scrollToAbout() {
+    const aboutElement = document.querySelector('#about');
+    aboutElement.scrollIntoView();
+}
+function scrollToGallery() {
+    const galleryElement = document.querySelector('#gallery');
+    galleryElement.scrollIntoView();
+}
+function scrollToNews() {
+    const newsElement = document.querySelector('#news');
+    newsElement.scrollIntoView();
+}
