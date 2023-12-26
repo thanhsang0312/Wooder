@@ -238,6 +238,129 @@ button {
   -webkit-transition: var(--btn-dt);
 }
 
+.signup {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+}
+.signup .container {
+  height: 100%;
+}
+.signup .container .signup__form {
+  background-color: var(--white-cl);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 50px 40px 51px 57px;
+  position: relative;
+}
+.signup .container .signup__form .signup__form--closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  background-color: var(--prim-cl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup .container .signup__form .signup__form--top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+}
+.signup .container .signup__form .signup__form--top .social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 16px;
+}
+.signup .container .signup__form .signup__form--top .social .social__item {
+  height: 46px;
+  background-color: #4285F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup .container .signup__form .signup__form--top .social .social__item span {
+  font-family: pb;
+  font-size: var(--fz-btn);
+  line-height: normal;
+  letter-spacing: var(--ls-btn);
+  color: var(--white-cl);
+  text-transform: uppercase;
+}
+.signup .container .signup__form .signup__form--top .social .social__item:last-child {
+  background-color: #3C5A99;
+}
+.signup .container .signup__form .signup__form--top .optional {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.signup .container .signup__form .signup__form--top .optional::after {
+  content: "";
+  display: block;
+  width: 33.3333333333%;
+  height: 1px;
+  background-color: var(--prim-cl);
+  position: absolute;
+  top: 12px;
+  left: 0;
+  z-index: 1;
+}
+.signup .container .signup__form .signup__form--top .optional::before {
+  content: "";
+  display: block;
+  width: 33.3333333333%;
+  height: 1px;
+  background-color: var(--prim-cl);
+  position: absolute;
+  top: 12px;
+  right: 0;
+  z-index: 1;
+}
+.signup .container .signup__form .signup__form--bottom {
+  display: grid;
+  gap: 16px;
+}
+.signup .container .signup__form .signup__form--bottom .form__group {
+  height: 46px;
+  border: 1px solid var(--black-cl);
+}
+.signup .container .signup__form .signup__form--bottom .form__group input {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+.signup .container .signup__form .signup__form--bottom .form__group.--pw {
+  position: relative;
+}
+.signup .container .signup__form .signup__form--bottom .form__group.--pw button {
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.signup .container .signup__form .signup__form--bottom .signup__btn {
+  height: 48px;
+  width: 100%;
+  background-color: var(--prim-cl);
+  font-family: pb;
+  font-size: var(--fz-btn);
+  line-height: normal;
+  letter-spacing: var(--ls-btn);
+  color: var(--white-cl);
+}
+.signup.hide {
+  display: none;
+}
+
 .header {
   background: var(--bg-header);
   height: 90px;
@@ -412,11 +535,23 @@ button {
   border: 1px solid var(--white-cl);
   padding: var(--pd--container);
   gap: 12px;
-  transition: var(--btn-dt);
-  -webkit-transition: var(--btn-dt);
+  position: relative;
 }
-.main .hero .container-fluid .hero__top .hero__top--btn:hover {
+.main .hero .container-fluid .hero__top .hero__top--btn::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: var(--prim-cl);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  z-index: -1;
+}
+.main .hero .container-fluid .hero__top .hero__top--btn:hover::before {
+  width: 100%;
 }
 .main .hero .container-fluid .hero__top .hero__top--btn span {
   font-family: pb;
@@ -628,7 +763,7 @@ button {
   width: -moz-fit-content;
   width: fit-content;
   background-color: transparent;
-  height: 48px;
+  height: 44px;
   padding: 0 34px;
   gap: 10px;
   border: 1px solid var(--white-cl);
