@@ -13,6 +13,7 @@
 
         .footer__copyright {
             @include formatText(pr, var(--fz-text-sm), normal, var(--ls-text-sm), var(--white-cl));
+            opacity: 0.5;
         }
 
         .footer__logo {

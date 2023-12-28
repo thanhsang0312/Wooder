@@ -54,23 +54,30 @@
             align-items: center;
             justify-content: center;
 
-            .header__cta--btn {
+            .header__cta--lang {
                 @include flexCenter;
                 padding: 0 18px;
                 height: 38px;
                 @include formatText(pb, var(--fz-btn), normal, var(--ls-btn), var(--white-cl));
 
-
                 svg {
                     margin-left: 2px;
                 }
+
+                .dropdown {
+                    display: none;
+                }
             }
 
-            .header__cta--btn:nth-child(2) {
+            .header__cta--signup {
                 background-color: var(--prim-cl);
                 border: 1px solid var(--prim-cl);
                 transition: var(--btn-dt);
                 -webkit-transition: var(--btn-dt);
+                @include flexCenter;
+                padding: 0 18px;
+                height: 38px;
+                @include formatText(pb, var(--fz-btn), normal, var(--ls-btn), var(--white-cl));
 
                 &:hover {
                     background-color: transparent;

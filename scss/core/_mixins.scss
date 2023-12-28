@@ -5,10 +5,10 @@
     object-fit: cover;
 }
 
-@mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin flexCenter ($flex: flex, $jc: center, $ai: center) {
+    display: $flex;
+    justify-content: $jc;
+    align-items: $ai;
 }
 
 @mixin overText($line) {

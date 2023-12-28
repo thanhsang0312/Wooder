@@ -37,3 +37,7 @@ function scrollToNews() {
     const newsElement = document.querySelector('#news');
     newsElement.scrollIntoView();
 }
+function scrollToVideos() {
+    const videosElement = document.querySelector('#videos');
+    videosElement.scrollIntoView();
+}
