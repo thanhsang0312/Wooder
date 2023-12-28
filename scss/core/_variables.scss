@@ -10,17 +10,17 @@
     --max-w-cfluid: 1920px;
     --max-w-container: 1252px; //1252px
     // Text
-    --fz-lv1: 84px;
-    --fz-lv2: 46px;
-    --fz-lv3: 18px;
-    --fz-btn: 15px;
-    --fz-text: 18px;
-    --fz-text-sm: 14px;
-    --fz-number: 38px;
+    --fz-lv1: 8.4rem;
+    --fz-lv2: 4.6rem;
+    --fz-lv3: 1.8rem;
+    --fz-btn: 1.5rem;
+    --fz-text: 1.8rem;
+    --fz-text-sm: 1.4rem;
+    --fz-number: 3.8rem;
     // Line-height
-    --lh-text: 25px;
-    --lh-h2: 56px;
-    --lh-h3: 24px;
+    --lh-text: 2.5rem;
+    --lh-h2: 5.6rem;
+    --lh-h3: 2.4rem;
     // Letter-spacing
     --ls-text: 0.36px;
     --ls-h1: 10.08px;
@@ -30,17 +30,39 @@
     --ls-number: 2.28px;
     --ls-text-sm: 0.56px;
     // Padding
-    --pd--cfluid: 28px;
-    --pd--container: 28px;
+    --gap: 28px;
     --pd--section: 120px;
     // Duration time
     --btn-dt: 0.2s;
 
     // Responsive
+    @include md {
+        --max-w-container: 1140px;
+    }
+
     @include sm {
-        --max-w-container: 1016px; // 960px + 28px*2
+        --max-w-container: 960px;
         --pd--section: 90px;
     }
 
+    @include xs {
+        --max-w-container: 720px;
+        --pd--section: 60px;
+        --gap: 10px;
 
+        --fz-lv1: 5.6rem;
+        --fz-lv2: 3.8rem;
+        --fz-lv3: 1.6rem;
+        --fz-btn: 1.2rem;
+        --fz-text: 1.5rem;
+        --fz-text-sm: 1.2rem;
+
+        --lh-text: 2rem;
+        --lh-h2: 4.2rem;
+        --lh-h3: 2.2rem;
+    }
+
+    @include xxs {
+        --max-w-container: 100%;
+    }
 }

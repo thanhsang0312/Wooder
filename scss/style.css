@@ -73,16 +73,16 @@ button {
   --max-w-page: 2560px;
   --max-w-cfluid: 1920px;
   --max-w-container: 1252px;
-  --fz-lv1: 84px;
-  --fz-lv2: 46px;
-  --fz-lv3: 18px;
-  --fz-btn: 15px;
-  --fz-text: 18px;
-  --fz-text-sm: 14px;
-  --fz-number: 38px;
-  --lh-text: 25px;
-  --lh-h2: 56px;
-  --lh-h3: 24px;
+  --fz-lv1: 8.4rem;
+  --fz-lv2: 4.6rem;
+  --fz-lv3: 1.8rem;
+  --fz-btn: 1.5rem;
+  --fz-text: 1.8rem;
+  --fz-text-sm: 1.4rem;
+  --fz-number: 3.8rem;
+  --lh-text: 2.5rem;
+  --lh-h2: 5.6rem;
+  --lh-h3: 2.4rem;
   --ls-text: 0.36px;
   --ls-h1: 10.08px;
   --ls-h2: 4.6px;
@@ -90,15 +90,40 @@ button {
   --ls-btn: 1.5px;
   --ls-number: 2.28px;
   --ls-text-sm: 0.56px;
-  --pd--cfluid: 28px;
-  --pd--container: 28px;
+  --gap: 28px;
   --pd--section: 120px;
   --btn-dt: 0.2s;
 }
+@media screen and (max-width: 1199.98px) {
+  :root {
+    --max-w-container: 1140px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   :root {
-    --max-w-container: 1016px;
+    --max-w-container: 960px;
     --pd--section: 90px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  :root {
+    --max-w-container: 720px;
+    --pd--section: 60px;
+    --gap: 10px;
+    --fz-lv1: 5.6rem;
+    --fz-lv2: 3.8rem;
+    --fz-lv3: 1.6rem;
+    --fz-btn: 1.2rem;
+    --fz-text: 1.5rem;
+    --fz-text-sm: 1.2rem;
+    --lh-text: 2rem;
+    --lh-h2: 4.2rem;
+    --lh-h3: 2.2rem;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  :root {
+    --max-w-container: 100%;
   }
 }
 
@@ -106,7 +131,8 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-html body {
+
+body {
   width: 100%;
   max-width: var(--max-w-page);
   margin: auto;
@@ -116,33 +142,40 @@ html body {
   letter-spacing: var(--ls-text);
   color: var(--black-cl);
 }
-html body .container-fluid {
+body .container-fluid {
   width: 100%;
   max-width: var(--max-w-cfluid);
-  padding-left: var(--pd--cfluid);
-  padding-right: var(--pd--cfluid);
+  padding-left: var(--gap);
+  padding-right: var(--gap);
   margin: 0 auto;
   position: relative;
 }
-html body .container {
+body .container {
   width: 100%;
   max-width: var(--max-w-container);
-  padding-left: var(--pd--container);
-  padding-right: var(--pd--container);
+  padding-left: var(--gap);
+  padding-right: var(--gap);
   margin: 0 auto;
   position: relative;
 }
-html body .main {
+body .main {
   position: relative;
 }
-html body .main section.--ptb {
+body .main section.--ptb {
   padding: var(--pd--section) 0;
 }
-html body .main section.--pt {
+body .main section.--pt {
   padding-top: var(--pd--section);
 }
-html body .main section.--pb {
+body .main section.--pb {
   padding-bottom: var(--pd--section);
+}
+@media screen and (max-width: 767.98px) {
+  body .container-fluid,
+  body .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .loading {
