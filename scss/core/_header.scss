@@ -1,9 +1,14 @@
 .header {
     background: var(--bg-header);
-    height: 90px;
+    height: var(--header-height);
     width: 100%;
     position: fixed;
-    z-index: 3;
+    z-index: 4;
+    @include durationTime(var(--btn-dt));
+
+    &.--black {
+        background-color: var(--black-cl);
+    }
 
     .container-fluid {
         display: flex;
@@ -59,13 +64,38 @@
                 padding: 0 18px;
                 height: 38px;
                 @include formatText(pb, var(--fz-btn), normal, var(--ls-btn), var(--white-cl));
+                position: relative;
+                cursor: pointer;
+
+                .curr {
+                    @include flexCenter;
+                }
 
                 svg {
                     margin-left: 2px;
                 }
 
                 .dropdown {
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%);
+                    bottom: -90px;
+                    background-color: var(--black-cl);
                     display: none;
+                    flex-direction: column;
+
+                    li {
+                        padding: 7px 20px;
+                        @include durationTime(var(--btn-dt));
+
+                        &:hover {
+                            color: var(--prim-cl);
+                        }
+                    }
+                }
+
+                &:hover .dropdown {
+                    @include flexCenter;
                 }
             }
 
@@ -78,6 +108,7 @@
                 padding: 0 18px;
                 height: 38px;
                 @include formatText(pb, var(--fz-btn), normal, var(--ls-btn), var(--white-cl));
+                cursor: pointer;
 
                 &:hover {
                     background-color: transparent;

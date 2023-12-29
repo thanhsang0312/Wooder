@@ -4,6 +4,7 @@ window.onscroll = function () {
 }
 function scrollToTop() {
     const btnElement = document.querySelector('.footer__backtotopbtn');
+    const headerElement = document.querySelector('.header');
     const heroElement = document.querySelector('.hero');
     const heroHeight = heroElement.clientHeight;
     if (window.scrollY > heroHeight) {
@@ -14,9 +15,11 @@ function scrollToTop() {
                 behavior: 'smooth'
             });
         })
+        headerElement.classList.add("--black");
     }
     else {
         btnElement.classList.remove('show');
+        headerElement.classList.remove("--black");
     }
 }
 // -----------------------

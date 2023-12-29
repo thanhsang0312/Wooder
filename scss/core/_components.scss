@@ -89,48 +89,59 @@
         @include flexCenter;
         gap: 10px;
         padding: 0 34px;
-        height: 38px;
+        height: 44px;
         border: 1px solid var(--white-cl);
         margin-top: 48px;
+        @include durationTime(var(--btn-dt));
+
+        &:hover {
+            background-color: var(--prim-cl);
+        }
     }
 
     &.--align-left {
-        margin-left: 72px;
+        padding-left: 72px;
+
+        position: relative;
 
         .heading {
-            position: relative;
             margin-bottom: 10px;
 
-            &::before {
-                content: '';
-                width: 58px;
-                height: 5px;
-                background-color: var(--prim-cl);
-                position: absolute;
-                top: 24px;
-                left: -72px;
-            }
+        }
+
+        &::before {
+            content: '';
+            width: 58px;
+            height: 5px;
+            background-color: var(--prim-cl);
+            position: absolute;
+            top: 24px;
+            left: 0;
         }
     }
 
     &.--align-right {
         position: relative;
         text-align: right;
-        margin-right: 72px;
+        padding-right: 72px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
 
         .heading {
-            position: relative;
             margin-bottom: 8px;
 
-            &::after {
-                content: '';
-                width: 58px;
-                height: 5px;
-                background-color: var(--prim-cl);
-                position: absolute;
-                top: 24px;
-                right: -72px;
-            }
+        }
+
+        &::after {
+            content: '';
+            width: 58px;
+            height: 5px;
+            background-color: var(--prim-cl);
+            position: absolute;
+            top: 24px;
+            right: 0;
         }
 
     }
@@ -139,11 +150,14 @@
         position: relative;
         text-align: center;
 
+        .heading {
+            margin-bottom: 40px;
+        }
+
         .des {
             max-width: 50%;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 33px;
         }
 
         &::before {

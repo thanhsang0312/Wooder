@@ -68,7 +68,7 @@
             </div>
         </div>
     </header>
-    <nav>
+    <nav class="nav-mobile">
         <ul class="header__nav">
             <li><a href="#" class="active">home</a></li>
             <li><a onclick="scrollToProducts()">products</a></li>
@@ -90,6 +90,7 @@
                         <a href="#" class="btnmain">learn more <img src="img/right-arrow.svg" alt=""></a>
                     </div>
                     <picture>
+                        <source media="(max-width:768px)" srcset="img/hero-banner-mb.jpg">
                         <source media="(max-width:992px)" srcset="img/hero-banner-tablet.jpg">
                         <img src="img/hero-banner.jpg" alt="">
                     </picture>
@@ -293,13 +294,13 @@
                     <li class="news__tabs--item">fashion</li>
                 </ul>
                 <div class="news__list">
-                    <figure class="news__list--item">
+                    <article class="news__list--item">
                         <a href="#" class="item__img">
                             <img src="img/news-thumb1.jpg" alt="">
                         </a>
                         <div class="item__info">
                             <h3 class="heading --lv3">
-                                <a href="">Where does it come from?</a>
+                                <a href="#">Where does it come from?</a>
                             </h3>
                             <p class="item__info--des">
                                 Contrary to popular belief, Lorem Ipsum
@@ -308,14 +309,14 @@
                                 in a piece of
                             </p>
                         </div>
-                    </figure>
-                    <figure class="news__list--item">
+                    </article>
+                    <article class="news__list--item">
                         <a href="#" class="item__img">
                             <img src="img/news-thumb2.jpg" alt="">
                         </a>
                         <div class="item__info">
                             <h3 class="heading --lv3">
-                                <a href="">There are many
+                                <a href="#">There are many
                                     variations of passages</a>
                             </h3>
                             <p class="item__info--des">
@@ -325,14 +326,14 @@
                                 is not
                             </p>
                         </div>
-                    </figure>
-                    <figure class="news__list--item">
+                    </article>
+                    <article class="news__list--item">
                         <a href="#" class="item__img">
                             <img src="img/news-thumb3.jpg" alt="">
                         </a>
                         <div class="item__info">
                             <h3 class="heading --lv3">
-                                <a href="">It is a long established
+                                <a href="#">It is a long established
                                     fact that a reader It has roots
                                     in a piece of It is a long established
                                     fact that a reader It has roots
@@ -345,7 +346,7 @@
                                 is not
                             </p>
                         </div>
-                    </figure>
+                    </article>
                 </div>
             </div>
         </section>
